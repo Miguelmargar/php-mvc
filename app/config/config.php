@@ -5,6 +5,8 @@
     define('URLROOT', 'http://localhost/miguel/traversymvc');
     // Site Name
     define('SITENAME', 'SharePosts');
+    // App version
+    define('APPVERSION', '1.0.0');
 
     // DB params
     define('DB_HOST', 'localhost');
