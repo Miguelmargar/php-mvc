@@ -1,0 +1,11 @@
+# This checks for a file and if it doesn't find it it will send all requests
+# To index.php otherwise it will send the request to the file in question
+
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteBase /miguel/traversymvc/public
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
