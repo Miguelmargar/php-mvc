@@ -3,7 +3,7 @@
     <div class="card card-body bg-light mt-5">
         <h2>Add Post</h2>
         <p>Create a post with a form</p>
-        <form action="<?php echo URLROOT; ?>/users/login" method="post">
+        <form action="<?php echo URLROOT; ?>/posts/add" method="post">
               <div class="form-group">
                     <label for="title">Title: <sup>*</sup></label>
                     <input type="text" name="title"
