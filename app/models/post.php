@@ -52,4 +52,13 @@
             $row = $this->db->single();
             return $row;
         }
+
+        public function deletePost($id) {
+            $this->db->query('DELETE FROM posts WHERE id = :id');
+            // Bind values
+            $this->db->bind(':id', $id);
+
+            // Execute
+            return $this->db->execute();
+        }
     }
