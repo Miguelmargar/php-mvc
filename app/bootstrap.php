@@ -1,6 +1,8 @@
 <?php
     // load Config
     require_once 'config/config.php';
+    // Load Helpers
+    require_once 'helpers/url_helper.php';
 
     // Load libraries - not needed if autoload below
     //require_once 'libraries/core.php';
