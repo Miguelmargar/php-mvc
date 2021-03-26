@@ -19,7 +19,18 @@
             return $this->db->execute();
         }
 
-        // find user by email
+        // Login user
+        public function login($email, $password) {
+            $this->db->query('SELECT * FROM users WHERE email = :email');
+            $this->db->bind(':email', $email);
+
+            $row = $this->db->single();
+
+            $hashed_password = $row->password;
+            return password_verify($password, $hashed_password) ? $row : false;
+        }
+
+        // Find user by email
         public function findUserByEmail($email) {
             $this->db->query('SELECT * FROM users WHERE email = :email');
             // Bind Values
